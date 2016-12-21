@@ -1,8 +1,9 @@
-#!/bin/bash
+# Detect OS
+case $(head -n1 /etc/issue | cut -f 1 -d ' ') in
+    Debian)     type="debian" ;;
+esac
 
-#----------------------------------------------------------#
-#                  Variables&Functions                     #
-#----------------------------------------------------------#
+#!/bin/bash
 export PATH=$PATH:/sbin
 export DEBIAN_FRONTEND=noninteractive
 RHOST='apt.vestacp.com'
