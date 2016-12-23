@@ -1,10 +1,4 @@
 #!/bin/bash
-
-# Lunexy Debian installer v.05
-
-#----------------------------------------------------------#
-#                  Variables&Functions                     #
-#----------------------------------------------------------#
 export PATH=$PATH:/sbin
 export DEBIAN_FRONTEND=noninteractive
 RHOST='apt.vestacp.com'
@@ -41,18 +35,4 @@ apt-get update
 apt-get upgrade --force-yes -y
 service nginx restart
 nginx -V
-
-# Congrats
-echo '======================================================='
-echo
-echo ' _|      _|  _|_|_|_|    _|_|_|  _|_|_|_|_|    _|_|   '
-echo ' _|      _|  _|        _|            _|      _|    _| '
-echo ' _|      _|  _|_|_|      _|_|        _|      _|_|_|_| '
-echo '   _|  _|    _|              _|      _|      _|    _| '
-echo '     _|      _|_|_|_|  _|_|_|        _|      _|    _| '
-echo
-echo
-cat $tmpfile
-rm -f $tmpfile
-
 # EOF
