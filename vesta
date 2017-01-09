@@ -573,7 +573,11 @@ checkinstall --install=no -y
 wget http://c.vestacp.com/debian/8/php5-fpm/www.conf -O /etc/php-7.0.14/fpm/pool.d/www.conf
 update-rc.d php-7.0.14-fpm defaults
 
-
+#=Удаление PHP
+#
+#    dpkg --list | grep php | awk '/^ii/{ print $2}'
+#    x="$(dpkg --list | grep php | awk '/^ii/{ print $2}')"
+#    apt-get --purge remove $x
 
 #----------------------------------------------------------#
 #                         Backup                           #
